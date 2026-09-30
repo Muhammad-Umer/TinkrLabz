@@ -1,0 +1,189 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --color-navy: var(--navy);
+  --color-glow: var(--glow);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 2);
+}
+
+/* Light: soft lavender-white with the logo's navy + red */
+:root {
+  color-scheme: light;
+  --navy: oklch(0.26 0.1 280);
+  --glow: oklch(0.55 0.2 285);
+
+  --background: oklch(0.975 0.008 285);
+  --foreground: oklch(0.22 0.06 280);
+  --card: oklch(0.995 0.003 285);
+  --card-foreground: oklch(0.22 0.06 280);
+  --popover: oklch(0.995 0.003 285);
+  --popover-foreground: oklch(0.22 0.06 280);
+  --primary: oklch(0.58 0.22 25);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.945 0.015 285);
+  --secondary-foreground: oklch(0.26 0.1 280);
+  --muted: oklch(0.945 0.015 285);
+  --muted-foreground: oklch(0.46 0.04 280);
+  --accent: oklch(0.945 0.015 285);
+  --accent-foreground: oklch(0.26 0.1 280);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.89 0.02 285);
+  --input: oklch(0.89 0.02 285);
+  --ring: oklch(0.58 0.22 25);
+  --radius: 0.625rem;
+
+  --glass-bg: oklch(1 0 0 / 0.55);
+  --glass-border: oklch(1 0 0 / 0.7);
+  --glass-shadow: 0 10px 40px -12px oklch(0.26 0.1 280 / 0.25);
+  --glass-highlight: oklch(1 0 0 / 0.9);
+}
+
+/* Dark: deep midnight navy so the logo sits directly on the page */
+.dark {
+  color-scheme: dark;
+  --navy: oklch(0.95 0.015 285);
+  --glow: oklch(0.62 0.18 285);
+
+  --background: oklch(0.13 0.035 280);
+  --foreground: oklch(0.95 0.01 285);
+  --card: oklch(0.18 0.04 280);
+  --card-foreground: oklch(0.95 0.01 285);
+  --popover: oklch(0.18 0.04 280);
+  --popover-foreground: oklch(0.95 0.01 285);
+  --primary: oklch(0.63 0.22 25);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.17 0.04 280);
+  --secondary-foreground: oklch(0.95 0.01 285);
+  --muted: oklch(0.22 0.04 280);
+  --muted-foreground: oklch(0.72 0.03 285);
+  --accent: oklch(0.22 0.04 280);
+  --accent-foreground: oklch(0.95 0.01 285);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(1 0 0 / 0.1);
+  --input: oklch(1 0 0 / 0.14);
+  --ring: oklch(0.63 0.22 25);
+
+  --glass-bg: oklch(0.2 0.04 280 / 0.45);
+  --glass-border: oklch(1 0 0 / 0.12);
+  --glass-shadow: 0 10px 40px -12px oklch(0 0 0 / 0.6);
+  --glass-highlight: oklch(1 0 0 / 0.22);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  /* Liquid glass surface (inspired by liquid-glass-js): frosted backdrop, rim light, cursor specular */
+  .liquid-glass {
+    position: relative;
+    isolation: isolate;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    box-shadow:
+      inset 0 1px 0 0 var(--glass-highlight),
+      inset 0 -1px 0 0 oklch(1 0 0 / 0.04),
+      var(--glass-shadow);
+    backdrop-filter: blur(18px) saturate(170%);
+    -webkit-backdrop-filter: blur(18px) saturate(170%);
+  }
+  .liquid-glass::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    background: radial-gradient(
+      420px circle at var(--mx, 50%) var(--my, 50%),
+      color-mix(in oklch, var(--primary) 22%, transparent),
+      transparent 60%
+    );
+  }
+  .liquid-glass:hover::after {
+    opacity: 1;
+  }
+
+  /* Primary button: glow + light sweep on hover */
+  .btn-shine {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+  .btn-shine::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    transform: translateX(-120%) skewX(-20deg);
+    background: linear-gradient(90deg, transparent, oklch(1 0 0 / 0.45), transparent);
+    transition: transform 0.7s ease;
+  }
+  .btn-shine:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px -8px color-mix(in oklch, var(--primary) 70%, transparent);
+  }
+  .btn-shine:hover::before {
+    transform: translateX(120%) skewX(-20deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .btn-shine,
+  .btn-shine::before {
+    transition: none;
+  }
+}
