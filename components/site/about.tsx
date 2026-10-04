@@ -35,7 +35,7 @@ export function About() {
           </dl>
         </div>
 
-        <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-border">
+        <div className="relative aspect-4/5 overflow-hidden rounded-3xl border border-border">
           <ShaderGradient />
           <div className="relative flex h-full flex-col justify-between p-8 md:p-10">
             <GlassCard className="flex size-20 items-center justify-center self-start rounded-2xl">

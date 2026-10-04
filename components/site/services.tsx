@@ -36,7 +36,7 @@ export function Services() {
     <section id="services" className="relative scroll-mt-24 overflow-hidden py-24 md:py-32">
       <VantaBackground effect="dots" />
       <div
-        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background via-background/40 to-background"
+        className="pointer-events-none absolute inset-0 bg-linear-to-b from-background via-background/40 to-background"
         aria-hidden
       />
 

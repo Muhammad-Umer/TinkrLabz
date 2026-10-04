@@ -4,6 +4,18 @@ import { Montserrat, Nunito_Sans } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
 import './globals.css'
 
+if (typeof window !== 'undefined') {
+  const originalWarn = console.warn;
+  console.warn = (...args) => {
+    // Silence deprecation warnings coming from Three.js modules
+    if (args[0]?.toString().includes('THREE.Clock') || args[0]?.toString().includes('Multiple instances')) {
+      return;
+    }
+    originalWarn(...args);
+  };
+}
+
+
 const montserrat = Montserrat({
   subsets: ['latin'],
   variable: '--font-montserrat',

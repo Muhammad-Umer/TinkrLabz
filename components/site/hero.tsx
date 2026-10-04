@@ -8,11 +8,11 @@ export function Hero() {
     <section id="top" className="relative flex min-h-svh items-center overflow-hidden">
       <VantaBackground effect="net" />
       <div
-        className="pointer-events-none absolute inset-0 bg-gradient-to-r from-background via-background/75 to-background/0"
+        className="pointer-events-none absolute inset-0 bg-linear-to-r from-background via-background/75 to-background/0"
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-linear-to-t from-background to-transparent"
         aria-hidden
       />
 

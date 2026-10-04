@@ -12,11 +12,11 @@ export function Contact() {
   return (
     <section id="contact" className="relative scroll-mt-24 overflow-hidden py-24 md:py-32">
       <div
-        className="pointer-events-none absolute top-1/3 -left-40 size-[32rem] rounded-full bg-primary/15 blur-3xl"
+        className="pointer-events-none absolute top-1/3 -left-40 size-128 rounded-full bg-primary/15 blur-3xl"
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute -right-40 bottom-0 size-[28rem] rounded-full bg-glow/20 blur-3xl"
+        className="pointer-events-none absolute -right-40 bottom-0 size-112 rounded-full bg-glow/20 blur-3xl"
         aria-hidden
       />
       <div className="relative mx-auto grid max-w-6xl gap-16 px-6 lg:grid-cols-[1fr_1.2fr]">
