@@ -1,71 +1,31 @@
-import { ArrowDown, ArrowRight } from 'lucide-react'
+import { ArrowUpRight, BrainCircuit, Boxes, Code2, MessageCircle } from 'lucide-react'
 import { VantaBackground } from '@/components/effects/vanta-background'
+import { GuideAction } from './guide-action'
+import { TinkrBot } from './tinkrbot'
 
-const highlights = ['AI Applications', 'Intelligent Automation', 'Software Products', 'Cloud & Data']
+const paths = [
+  { view: 'ai', label: 'Explore AI', icon: BrainCircuit },
+  { view: 'products', label: 'Discover products', icon: Boxes },
+  { view: 'platform', label: 'Build or improve', icon: Code2 },
+  { view: 'contact', label: 'Start an inquiry', icon: MessageCircle },
+] as const
 
 export function Hero() {
   return (
-    <section id="top" className="relative flex min-h-svh items-center overflow-hidden">
+    <section id="top" className="relative flex min-h-[85svh] items-center overflow-hidden py-32">
       <VantaBackground effect="net" />
-      <div
-        className="pointer-events-none absolute inset-0 bg-linear-to-r from-background via-background/75 to-background/0"
-        aria-hidden
-      />
-      <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-linear-to-t from-background to-transparent"
-        aria-hidden
-      />
-
-      <div className="pointer-events-none relative mx-auto w-full max-w-6xl px-6 pt-32 pb-24">
-        <p className="liquid-glass mb-8 inline-flex items-center gap-3 rounded-full px-4 py-2 font-heading text-[11px] font-semibold uppercase tracking-[0.3em] text-primary">
-          <span className="relative flex size-2">
-            <span className="absolute inline-flex size-full animate-ping rounded-full bg-primary opacity-60" />
-            <span className="relative inline-flex size-2 rounded-full bg-primary" />
-          </span>
-          AI products. Practical engineering.
-        </p>
-        <h1 className="max-w-4xl text-balance text-4xl font-bold leading-[1.05] tracking-tight text-navy md:text-6xl">
-          AI and software. <span className="text-primary">Built for real impact.</span>
-        </h1>
-        <p className="mt-8 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
-          TinkrLabz turns AI ideas into useful products, intelligent workflows, and reliable software. From models and data to applications and cloud, we build it, connect it, and keep it working.
-        </p>
-
-        <div className="pointer-events-auto mt-8 flex flex-wrap items-center gap-4">
-          <a
-            href="#contact"
-            className="btn-shine group inline-flex items-center gap-3 rounded-full bg-primary px-8 py-4 font-heading text-xs font-semibold uppercase tracking-[0.2em] text-primary-foreground"
-          >
-            Bring Your Idea
-            <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden />
-          </a>
-          <a
-            href="/products"
-            className="liquid-glass inline-flex items-center rounded-full px-8 py-4 font-heading text-xs font-semibold uppercase tracking-[0.2em] text-navy transition-transform hover:-translate-y-0.5"
-          >
-            Explore Products
-          </a>
+      <div className="pointer-events-none absolute inset-0 bg-linear-to-r from-background via-background/85 to-background/40" aria-hidden="true" />
+      <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 px-6 lg:grid-cols-[1.3fr_0.7fr]">
+        <div>
+          <div className="mb-6 flex items-center gap-3"><TinkrBot className="size-14 lg:hidden" /><p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Hi, I am TinkrBot.</p></div>
+          <h1 className="max-w-3xl text-balance text-4xl font-bold leading-tight tracking-tight text-navy md:text-6xl">Your guide to AI <span className="text-primary">and smarter software.</span></h1>
+          <p className="mt-5 max-w-xl text-lg text-muted-foreground">Pick a direction. I will help you take the next step.</p>
+          <div className="mt-8 grid max-w-xl gap-3 sm:grid-cols-2">
+            {paths.map(path => <GuideAction key={path.view} view={path.view} className="liquid-glass group flex items-center justify-between gap-3 rounded-2xl px-5 py-5 text-left font-semibold text-navy hover:border-primary/50"><span className="flex items-center gap-3"><path.icon className="size-5 shrink-0 text-primary" aria-hidden="true" />{path.label}</span><ArrowUpRight className="size-4 shrink-0 text-primary" aria-hidden="true" /></GuideAction>)}
+          </div>
         </div>
-
-        <a href="#contact" className="pointer-events-auto mt-6 inline-block text-sm font-semibold text-primary hover:underline">Meet TinkrBot and start your mission</a>
-
-        <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-muted-foreground">
-          {highlights.map((item) => (
-            <li key={item} className="flex items-center gap-2">
-              <span className="size-1 rounded-full bg-primary" aria-hidden />
-              {item}
-            </li>
-          ))}
-        </ul>
+        <div className="hidden flex-col items-center lg:flex"><TinkrBot className="w-full max-w-72" /><GuideAction className="btn-shine mt-4 rounded-full bg-primary px-8 py-3 font-semibold text-primary-foreground">Guide me</GuideAction><p className="mt-3 text-sm text-muted-foreground">Choose. Explore. Build.</p></div>
       </div>
-
-      <a
-        href="#about"
-        className="absolute bottom-10 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-3 font-heading text-[10px] font-semibold uppercase tracking-[0.3em] text-muted-foreground transition-colors hover:text-foreground md:flex"
-      >
-        Scroll
-        <ArrowDown className="size-4 animate-bounce" aria-hidden />
-      </a>
     </section>
   )
 }

@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Logo } from './logo'
+import { GuideAction } from './guide-action'
 import { ThemeToggle } from './theme-toggle'
 
 const links = [
@@ -45,12 +46,7 @@ export function SiteHeader() {
 
           <div className="flex items-center gap-2">
             <ThemeToggle />
-            <a
-              href="/#contact"
-              className="btn-shine hidden rounded-full bg-primary px-5 py-3 font-heading text-xs font-semibold uppercase tracking-[0.18em] text-primary-foreground lg:inline-block"
-            >
-              {"Let's Talk"}
-            </a>
+            <GuideAction className="btn-shine hidden rounded-full bg-primary px-5 py-3 text-xs font-semibold text-primary-foreground lg:inline-block">Guide me</GuideAction>
             <button
               type="button"
               className="flex size-10 items-center justify-center rounded-full text-foreground lg:hidden"

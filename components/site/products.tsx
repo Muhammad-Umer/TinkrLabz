@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { GuideAction } from './guide-action'
 import { products } from '@/lib/products'
 import { SectionHeading } from './section-heading'
 
@@ -6,13 +7,11 @@ export function ProductCatalog() {
   if (!products.length) {
     return (
       <div className="rounded-2xl border border-border bg-secondary/40 p-8">
-        <h3 className="text-xl font-bold text-navy">Stay in the loop</h3>
+        <h3 className="text-xl font-bold text-navy">What is next?</h3>
         <p className="mt-3 max-w-2xl leading-relaxed text-muted-foreground">
-          No public products are listed yet. Contact us to ask about TinkrLabz products or share a problem you would like software to solve.
+          No public products are listed yet.
         </p>
-        <Link href="/#contact" className="mt-6 inline-block font-semibold text-primary hover:underline">
-          Ask about our products
-        </Link>
+        <GuideAction view="contact" category="Ask about a TinkrLabz product" className="mt-5 inline-block font-semibold text-primary hover:underline">Ask TinkrBot about products</GuideAction>
       </div>
     )
   }
@@ -38,7 +37,7 @@ export function Products() {
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading eyebrow="Our Products" title="Ideas with intelligence built in." />
         <p className="mt-6 max-w-2xl leading-relaxed text-muted-foreground">
-          Our product direction brings AI and practical software together. Alongside client solutions, we explore tools that make everyday work simpler and more useful.
+          AI and practical tools for everyday work.
         </p>
         <div className="mt-10"><ProductCatalog /></div>
         <Link href="/products" className="mt-8 inline-block font-semibold text-primary hover:underline">

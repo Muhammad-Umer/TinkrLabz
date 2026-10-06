@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
 import { contactProgress, validateContact } from '../lib/contact.ts'
-import { missions, emptyContact } from '../lib/tinkrbot.ts'
+import { inquiryTopics, emptyContact } from '../lib/tinkrbot.ts'
 import { technologyGroups } from '../lib/technologies.ts'
 
 test('technology landscape has no duplicate technologies across categories', () => {
@@ -9,8 +9,8 @@ test('technology landscape has no duplicate technologies across categories', () 
   assert.equal(entries.length, new Set(entries).size)
   assert.deepEqual(technologyGroups[0].items, ['Amazon Web Services', 'Microsoft Azure', 'Google Cloud'])
 })
-test('TinkrBot missions select categories accepted by server validation', () => {
-  for (const mission of missions) {
+test('TinkrBot inquiry topics select categories accepted by server validation', () => {
+  for (const mission of inquiryTopics) {
     const errors = validateContact({ ...emptyContact, name: 'Jane', email: 'jane@example.com', category: mission.category, message: 'A useful project' })
     assert.deepEqual(errors, {})
   }

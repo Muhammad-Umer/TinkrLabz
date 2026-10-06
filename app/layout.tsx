@@ -1,6 +1,8 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { ThemeProvider } from '@/components/theme-provider'
+import { GuideProvider } from '@/components/site/guide-context'
+import { SiteGuide } from '@/components/site/site-guide'
 import './globals.css'
 
 if (typeof window !== 'undefined') {
@@ -47,7 +49,7 @@ export default function RootLayout({
     >
       <body className="antialiased">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
-          {children}
+          <GuideProvider>{children}<SiteGuide /></GuideProvider>
         </ThemeProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

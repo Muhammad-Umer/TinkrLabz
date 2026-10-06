@@ -3,19 +3,19 @@ import { SectionHeading } from './section-heading'
 const steps = [
   {
     title: 'Discover',
-    body: 'Understand the business problem, technical landscape, constraints, and definition of success.',
+    body: 'Define the problem and the outcome.',
   },
   {
     title: 'Design',
-    body: 'Shape the architecture, user experience, and delivery plan around the outcome.',
+    body: 'Shape the solution and the plan.',
   },
   {
     title: 'Build',
-    body: 'Deliver iteratively with clear milestones, technical ownership, and transparent communication.',
+    body: 'Ship useful software in clear steps.',
   },
   {
     title: 'Support',
-    body: 'Operate, improve, and evolve what we build after launch.',
+    body: 'Keep it reliable. Keep improving.',
   },
 ]
 
@@ -25,9 +25,6 @@ export function Process() {
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading eyebrow="How We Work" title="From concept to completion, with precision." />
 
-        <p className="mt-8 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-          Start with the problem and a clear definition of success. We shape the solution, deliver working software in useful increments, and keep it reliable as needs evolve.
-        </p>
         <ol className="mt-16 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           {steps.map((step, i) => (
             <li key={step.title} className="group relative pt-8">
