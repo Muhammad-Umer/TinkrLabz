@@ -17,10 +17,10 @@ if (typeof window !== 'undefined') {
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.tinkrlabz.com'),
-  title: 'TinkrLabz | Software Development, DevOps & Technology Consulting',
-  description: 'TinkrLabz builds senior engineering teams for cloud, DevOps, application development, data platforms, managed engineering, and technology consulting.',
-  openGraph: { title: 'TinkrLabz | Software Development, DevOps & Technology Consulting', description: 'Senior engineering teams built around your problem. Architecture, cloud, applications, and ongoing operations.', type: 'website', siteName: 'TinkrLabz', images: [{ url: '/opengraph-image', width: 1200, height: 630 }] },
-  twitter: { card: 'summary_large_image', title: 'TinkrLabz | Software Development, DevOps & Technology Consulting', description: 'Senior engineering teams built around your problem.', images: ['/opengraph-image'] },
+  title: 'TinkrLabz | Software Products & Engineering Services',
+  description: 'TinkrLabz creates software products and delivers application development, cloud, DevOps, data platforms, managed engineering, and technology consulting.',
+  openGraph: { title: 'TinkrLabz | Software Products & Engineering Services', description: 'Software products and engineering services for real business problems. Applications, cloud, data, and ongoing operation.', type: 'website', siteName: 'TinkrLabz', images: [{ url: '/opengraph-image', width: 1200, height: 630 }] },
+  twitter: { card: 'summary_large_image', title: 'TinkrLabz | Software Products & Engineering Services', description: 'Software that solves real problems.', images: ['/opengraph-image'] },
   verification: { google: process.env.GOOGLE_SITE_VERIFICATION },
   icons: {
     icon: '/images/logo-mark.png',

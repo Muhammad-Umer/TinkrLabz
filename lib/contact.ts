@@ -1,4 +1,4 @@
-export const categories = ['Build a product', 'Extend my engineering team', 'Cloud / DevOps', 'Managed engineering', 'Data / governance', 'Technology consulting', 'Something else'] as const
+export const categories = ['Build a product', 'Improve an application or platform', 'Ask about a TinkrLabz product', 'Cloud / DevOps', 'Managed engineering', 'Data / governance', 'Technology consulting', 'Something else'] as const
 export type ContactData = { name: string; email: string; company: string; category: string; message: string; website: string }
 export function validateContact(data: ContactData) {
   const errors: Record<string, string> = {}

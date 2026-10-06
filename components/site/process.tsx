@@ -6,8 +6,8 @@ const steps = [
     body: 'Understand the business problem, technical landscape, constraints, and definition of success.',
   },
   {
-    title: 'Assemble',
-    body: 'Build the right mix of engineering, architecture, platform, data, and delivery expertise.',
+    title: 'Design',
+    body: 'Shape the architecture, user experience, and delivery plan around the outcome.',
   },
   {
     title: 'Build',
@@ -25,11 +25,9 @@ export function Process() {
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading eyebrow="How We Work" title="From concept to completion, with precision." />
 
-        <p className="mt-8 max-w-3xl text-lg leading-relaxed text-muted-foreground">TinkrLabz builds a delivery team around your problem rather than simply filling seats. We combine engineering, architecture, cloud, and delivery leadership under one engagement, then adapt the team as your needs change.</p>
-        <div className="mt-8 grid gap-6 md:grid-cols-2">
-          <div className="rounded-2xl border border-border p-6"><h3 className="font-bold">Traditional staff augmentation</h3><p className="mt-3 text-muted-foreground">You manage individual roles and retain delivery ownership. Capacity is the deliverable; changing the team requires new hiring cycles.</p></div>
-          <div className="rounded-2xl border border-primary/40 p-6"><h3 className="font-bold">A team accountable for delivery</h3><p className="mt-3 text-muted-foreground">We assemble around outcomes, share architecture and delivery ownership, and evolve the team as the project changes.</p></div>
-        </div>
+        <p className="mt-8 max-w-3xl text-lg leading-relaxed text-muted-foreground">
+          Start with the problem and a clear definition of success. We shape the solution, deliver working software in useful increments, and keep it reliable as needs evolve.
+        </p>
         <ol className="mt-16 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           {steps.map((step, i) => (
             <li key={step.title} className="group relative pt-8">

@@ -25,17 +25,17 @@ export function ContactForm() {
     } catch { setError('Unable to send. Please try again or email hello@tinkrlabz.com.') }
     finally { busy.current = false; setPending(false) }
   }
-  if (sent) return <GlassCard role="status" className="p-10"><h3 className="text-2xl font-bold">Thanks — we received your message and will get back to you shortly.</h3><button type="button" className="mt-6 text-primary underline" onClick={() => setSent(false)}>Send another message</button></GlassCard>
+  if (sent) return <GlassCard role="status" className="p-10"><h3 className="text-2xl font-bold">Thanks. We received your message and will get back to you shortly.</h3><button type="button" className="mt-6 text-primary underline" onClick={() => setSent(false)}>Send another message</button></GlassCard>
   return <GlassCard className="p-8 md:p-10"><form noValidate onSubmit={submit} className="flex flex-col gap-5">
     <p className="text-sm text-muted-foreground">Fields marked * are required.</p>
     {(['name', 'email', 'company', 'category', 'message'] as const).map(key => <div key={key} className="flex flex-col gap-2">
-      <label htmlFor={`contact-${key}`} className="text-sm font-semibold">{{ name: 'Name *', email: 'Work email *', company: 'Company (optional)', category: 'What are you looking for? *', message: 'Tell us about your project *' }[key]}</label>
-      {key === 'category' ? <select id={`contact-${key}`} name={key} required className={fieldClass} aria-invalid={!!errors[key]} aria-describedby={errors[key] ? `${key}-error` : undefined} defaultValue=""><option value="" disabled>Select a service</option>{categories.map(value => <option key={value}>{value}</option>)}</select> : key === 'message' ? <textarea id={`contact-${key}`} name={key} required rows={6} maxLength={5000} className={fieldClass} aria-invalid={!!errors[key]} aria-describedby={errors[key] ? `${key}-error` : undefined} /> : <input id={`contact-${key}`} name={key} type={key === 'email' ? 'email' : 'text'} autoComplete={{name:'name',email:'email',company:'organization'}[key]} required={key !== 'company'} maxLength={{name:120,email:254,company:200}[key]} className={fieldClass} aria-invalid={!!errors[key]} aria-describedby={errors[key] ? `${key}-error` : undefined} />}
+      <label htmlFor={`contact-${key}`} className="text-sm font-semibold">{{ name: 'Name *', email: 'Work email *', company: 'Company (optional)', category: 'What are you looking for? *', message: 'Tell us more *' }[key]}</label>
+      {key === 'category' ? <select id={`contact-${key}`} name={key} required className={fieldClass} aria-invalid={!!errors[key]} aria-describedby={errors[key] ? `${key}-error` : undefined} defaultValue=""><option value="" disabled>Select a topic</option>{categories.map(value => <option key={value}>{value}</option>)}</select> : key === 'message' ? <textarea id={`contact-${key}`} name={key} required rows={6} maxLength={5000} className={fieldClass} aria-invalid={!!errors[key]} aria-describedby={errors[key] ? `${key}-error` : undefined} /> : <input id={`contact-${key}`} name={key} type={key === 'email' ? 'email' : 'text'} autoComplete={{name:'name',email:'email',company:'organization'}[key]} required={key !== 'company'} maxLength={{name:120,email:254,company:200}[key]} className={fieldClass} aria-invalid={!!errors[key]} aria-describedby={errors[key] ? `${key}-error` : undefined} />}
       {errors[key] && <p id={`${key}-error`} className="text-sm text-red-500">{errors[key]}</p>}
     </div>)}
     <div className="hidden" aria-hidden="true"><label htmlFor="contact-website">Website</label><input id="contact-website" name="website" tabIndex={-1} autoComplete="off" /></div>
     <p className="text-sm text-muted-foreground">Your details are used to respond to your inquiry. <a href="/privacy" className="underline">Privacy Policy</a></p>
     {error && <p role="alert" className="text-sm text-red-500">{error}</p>}
-    <button disabled={pending} className="rounded-full bg-primary px-8 py-4 font-semibold text-primary-foreground disabled:opacity-60">{pending ? 'Sending…' : 'Discuss My Project'}</button>
+    <button disabled={pending} className="rounded-full bg-primary px-8 py-4 font-semibold text-primary-foreground disabled:opacity-60">{pending ? 'Sending…' : 'Send My Inquiry'}</button>
   </form></GlassCard>
 }

@@ -9,6 +9,7 @@ import { ThemeToggle } from './theme-toggle'
 const links = [
   { href: '/#about', label: 'About' },
   { href: '/#services', label: 'Services' },
+  { href: '/products', label: 'Products' },
   { href: '/#process', label: 'Process' },
   { href: '/#contact', label: 'Contact' },
 ]
@@ -27,7 +28,7 @@ export function SiteHeader() {
         <div className="flex h-16 items-center justify-between pr-3 pl-6">
           <Logo />
 
-          <nav aria-label="Primary" className="hidden md:block">
+          <nav aria-label="Primary" className="hidden lg:block">
             <ul className="flex items-center gap-1">
               {links.map((link) => (
                 <li key={link.href}>
@@ -46,13 +47,13 @@ export function SiteHeader() {
             <ThemeToggle />
             <a
               href="/#contact"
-              className="btn-shine hidden rounded-full bg-primary px-5 py-3 font-heading text-xs font-semibold uppercase tracking-[0.18em] text-primary-foreground md:inline-block"
+              className="btn-shine hidden rounded-full bg-primary px-5 py-3 font-heading text-xs font-semibold uppercase tracking-[0.18em] text-primary-foreground lg:inline-block"
             >
               {"Let's Talk"}
             </a>
             <button
               type="button"
-              className="flex size-10 items-center justify-center rounded-full text-foreground md:hidden"
+              className="flex size-10 items-center justify-center rounded-full text-foreground lg:hidden"
               aria-expanded={open}
               aria-controls="mobile-nav"
               onClick={() => setOpen((v) => !v)}
@@ -64,7 +65,7 @@ export function SiteHeader() {
         </div>
 
         {open && (
-          <nav id="mobile-nav" aria-label="Mobile" className="border-t border-border md:hidden">
+          <nav id="mobile-nav" aria-label="Mobile" className="border-t border-border lg:hidden">
             <ul className="flex flex-col px-6 py-3">
               {links.map((link) => (
                 <li key={link.href}>

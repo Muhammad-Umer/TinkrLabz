@@ -23,3 +23,7 @@ For Search Console, obtain the property verification token, set `GOOGLE_SITE_VER
 TK-31 is blocked: no approved project evidence is available. `/work` is prepared but does not fabricate case studies. Supply at least two verified summaries before completing that issue. No LinkedIn URL was supplied, so no speculative social link is published. Review Privacy Policy and Website Terms against actual company practices before production. Technology groups follow the Linear issue's supplied list; confirm supported capabilities before launch.
 
 System fonts avoid build-time requests to Google Fonts. To restore custom typography, add licensed, self-hosted Montserrat and Nunito Sans files with `next/font/local`.
+
+## Products and positioning
+
+`lib/products.ts` is the approved public product catalog. It starts empty because no product details have been supplied. Add a unique slug, name, description, and a working product URL to publish a product in both the homepage section and `/products`. Keep unpublished concepts out of this catalog. The site supports both TinkrLabz products and client engineering services. Copy focuses on software outcomes and uses no hyphens or dash punctuation in visible text. Cloud capabilities include AWS, Azure, and Google Cloud Platform (GCP).

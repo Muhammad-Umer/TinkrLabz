@@ -1,11 +1,11 @@
-import { Globe, Handshake, Users } from 'lucide-react'
+import { Globe, Handshake, Layers } from 'lucide-react'
 import { SectionHeading } from './section-heading'
 import { ContactForm } from './contact-form'
 
 const details = [
-  { icon: Users, label: 'Team building', value: 'Senior, problem-focused teams' },
-  { icon: Handshake, label: 'Engagements', value: 'Projects & managed services' },
-  { icon: Globe, label: 'Working model', value: 'Remote-first collaboration' },
+  { icon: Layers, label: 'Solutions', value: 'Products, applications & platforms' },
+  { icon: Handshake, label: 'Engagements', value: 'Product inquiries & engineering services' },
+  { icon: Globe, label: 'Working model', value: 'Clear communication from design to operation' },
 ]
 
 export function Contact() {
@@ -21,9 +21,9 @@ export function Contact() {
       />
       <div className="relative mx-auto grid max-w-6xl gap-16 px-6 lg:grid-cols-[1fr_1.2fr]">
         <div>
-          <SectionHeading eyebrow="Contact Us" title="Tell us what you're building." />
+          <SectionHeading eyebrow="Contact Us" title="What would you like to solve?" />
           <p className="mt-8 max-w-md leading-relaxed text-muted-foreground">
-            Share where you are, where you're stuck, and what success looks like. We'll tell you how we'd approach it.
+            Ask about a TinkrLabz product or share what you want to build or improve. Tell us what success looks like, and we will discuss the next step.
           </p>
           <ul className="mt-12 flex flex-col gap-6">
             {details.map((d) => (

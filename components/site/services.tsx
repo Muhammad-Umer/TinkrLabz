@@ -14,7 +14,7 @@ const services = [
   {
     icon: ServerCog,
     title: 'Managed Engineering',
-    body: 'Extend your delivery capacity with an engineering team that owns outcomes, supports production, and evolves with your roadmap.',
+    body: 'Keep your software reliable and moving forward with ongoing development, production support, and improvements guided by your roadmap.',
   },
   {
     icon: Database,
@@ -24,7 +24,7 @@ const services = [
   {
     icon: Smartphone,
     title: 'Application Development',
-    body: 'Design and build production-ready web, mobile, backend, and distributed systems from initial architecture through launch.',
+    body: 'Design and build production ready web, mobile, backend, and distributed systems from initial architecture through launch.',
   },
   {
     icon: Compass,
@@ -46,8 +46,7 @@ export function Services() {
         <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <SectionHeading eyebrow="Our Services" title="Everything you need to build and scale." />
           <p className="max-w-sm leading-relaxed text-muted-foreground">
-            Five focused practices, one team — so your project moves from idea to production without
-            the hand-offs.
+            Practical engineering services to move your software from idea to production and keep it improving.
           </p>
         </div>
 

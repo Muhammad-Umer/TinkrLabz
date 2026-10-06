@@ -25,10 +25,10 @@ export function Hero() {
           Welcome to TinkrLabz
         </p>
         <h1 className="max-w-4xl text-balance text-4xl font-bold leading-[1.05] tracking-tight text-navy md:text-6xl">
-          Senior engineering teams built around <span className="text-primary">your problem.</span>
+          Software that solves <span className="text-primary">real problems.</span>
         </h1>
         <p className="mt-8 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
-          TinkrLabz assembles senior engineering teams around your problem and takes ownership of delivery—from architecture and cloud infrastructure to application development and ongoing operations.
+          TinkrLabz creates software products and delivers applications, cloud platforms, and data solutions. We take ideas from the first design through launch and ongoing operation.
         </p>
 
         <div className="pointer-events-auto mt-8 flex flex-wrap items-center gap-4">
@@ -40,10 +40,10 @@ export function Hero() {
             <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden />
           </a>
           <a
-            href="#services"
+            href="/products"
             className="liquid-glass inline-flex items-center rounded-full px-8 py-4 font-heading text-xs font-semibold uppercase tracking-[0.2em] text-navy transition-transform hover:-translate-y-0.5"
           >
-            Explore Our Services
+            Explore Products
           </a>
         </div>
 

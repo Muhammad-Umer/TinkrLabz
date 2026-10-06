@@ -7,9 +7,10 @@ import { Cta } from '@/components/site/cta'
 import { Contact } from '@/components/site/contact'
 import { SiteFooter } from '@/components/site/site-footer'
 
+import { Products } from '@/components/site/products'
 import { Technologies } from '@/components/site/technologies'
 
-export const metadata = { alternates: { canonical: '/' }, openGraph: { url: 'https://www.tinkrlabz.com/' } }
+export const metadata = { alternates: { canonical: '/' }, openGraph: { title: 'TinkrLabz | Software Products & Engineering Services', description: 'Software products and engineering services for real business problems.', type: 'website' as const, siteName: 'TinkrLabz', url: 'https://www.tinkrlabz.com/', images: [{ url: '/opengraph-image', width: 1200, height: 630 }] } }
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <main>
         <Hero />
         <About />
+        <Products />
         <Services />
         <Process />
         <Technologies />

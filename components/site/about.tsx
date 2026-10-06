@@ -6,8 +6,8 @@ import { SectionHeading } from './section-heading'
 const stats = [
   { value: '5', label: 'Core practices' },
   { value: 'Owned', label: 'Delivery outcomes' },
-  { value: 'End-to-end', label: 'Concept to launch' },
-  { value: 'Senior', label: 'Problem-focused teams' },
+  { value: 'Full lifecycle', label: 'Design to operation' },
+  { value: 'Products', label: 'Built by TinkrLabz' },
 ]
 
 export function About() {
@@ -17,7 +17,7 @@ export function About() {
         <div>
           <SectionHeading eyebrow="About Us" title="We turn your ideas into working software." />
           <p className="mt-8 text-pretty text-lg leading-relaxed text-muted-foreground">
-            TinkrLabz helps technology-driven businesses turn complex software problems into working products. We assemble the team, own the delivery, and stay with you long after launch.
+            TinkrLabz creates its own software products and helps businesses build and improve theirs. From application development to cloud and data platforms, we focus on useful software, reliable delivery, and lasting value.
           </p>
 
           <dl className="mt-12 grid grid-cols-2 gap-4">
@@ -55,7 +55,7 @@ export function About() {
 
             <GlassCard as="figure" className="p-8">
               <blockquote className="text-pretty font-heading text-xl font-semibold leading-snug text-navy md:text-2xl">
-                {'"We assemble the team, own the delivery, and stay with you long after launch."'}
+                {'"We build useful software, take ownership of delivery, and keep improving what we launch."'}
               </blockquote>
               <figcaption className="mt-5 flex items-center gap-3 text-sm text-muted-foreground">
                 <span className="h-px w-8 bg-primary" aria-hidden />
