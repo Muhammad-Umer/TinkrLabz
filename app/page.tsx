@@ -20,6 +20,7 @@ export default function Home() {
       <SiteHeader />
       <main>
         <Hero />
+        <details id="explore" className="mx-auto max-w-6xl px-4 pb-12"><summary className="cursor-pointer rounded-2xl border border-border px-5 py-4 text-sm font-semibold">Prefer to browse? Explore TinkrLabz</summary>
         <AiCapabilities />
         <About />
         <Products />
@@ -28,6 +29,7 @@ export default function Home() {
         <Technologies />
         <Cta />
         <Contact />
+        </details>
       </main>
       <SiteFooter />
     </>
