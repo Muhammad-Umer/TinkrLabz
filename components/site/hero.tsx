@@ -1,7 +1,7 @@
 import { ArrowDown, ArrowRight } from 'lucide-react'
 import { VantaBackground } from '@/components/effects/vanta-background'
 
-const highlights = ['DevOps', 'Managed Services', 'Data Governance', 'App Development', 'Consulting']
+const highlights = ['Cloud & DevOps', 'Application Development', 'Data & Governance', 'Managed Engineering']
 
 export function Hero() {
   return (
@@ -22,33 +22,32 @@ export function Hero() {
             <span className="absolute inline-flex size-full animate-ping rounded-full bg-primary opacity-60" />
             <span className="relative inline-flex size-2 rounded-full bg-primary" />
           </span>
-          Welcome to TinkerLabs
+          Welcome to TinkrLabz
         </p>
-        <h1 className="max-w-4xl text-balance text-5xl font-bold leading-[1.05] tracking-tight text-navy md:text-7xl">
-          Crafting code, <span className="text-primary">shaping</span> tomorrow.
+        <h1 className="max-w-4xl text-balance text-4xl font-bold leading-[1.05] tracking-tight text-navy md:text-6xl">
+          Senior engineering teams built around <span className="text-primary">your problem.</span>
         </h1>
         <p className="mt-8 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
-          Fueling innovation by assembling elite tech teams and driving projects from concept to
-          completion with precision and confidence.
+          TinkrLabz assembles senior engineering teams around your problem and takes ownership of delivery—from architecture and cloud infrastructure to application development and ongoing operations.
         </p>
 
-        <div className="pointer-events-auto mt-12 flex flex-wrap items-center gap-4">
+        <div className="pointer-events-auto mt-8 flex flex-wrap items-center gap-4">
           <a
             href="#contact"
             className="btn-shine group inline-flex items-center gap-3 rounded-full bg-primary px-8 py-4 font-heading text-xs font-semibold uppercase tracking-[0.2em] text-primary-foreground"
           >
-            {"Let's Talk"}
+            Discuss Your Project
             <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden />
           </a>
           <a
             href="#services"
             className="liquid-glass inline-flex items-center rounded-full px-8 py-4 font-heading text-xs font-semibold uppercase tracking-[0.2em] text-navy transition-transform hover:-translate-y-0.5"
           >
-            Our Services
+            Explore Our Services
           </a>
         </div>
 
-        <ul className="mt-16 flex flex-wrap gap-x-6 gap-y-3 text-sm text-muted-foreground">
+        <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-muted-foreground">
           {highlights.map((item) => (
             <li key={item} className="flex items-center gap-2">
               <span className="size-1 rounded-full bg-primary" aria-hidden />

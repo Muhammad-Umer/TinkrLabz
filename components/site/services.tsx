@@ -3,31 +3,33 @@ import { VantaBackground } from '@/components/effects/vanta-background'
 import { GlassCard } from '@/components/effects/glass-card'
 import { SectionHeading } from './section-heading'
 
+const serviceIds = ['cloud-devops', 'managed-engineering', 'data-governance', 'application-development', 'technology-consulting']
+
 const services = [
   {
     icon: InfinityIcon,
-    title: 'DevOps Wizardry',
-    body: 'Our DevOps expertise encompasses every stage of the software delivery lifecycle, ensuring your application and infrastructure perform optimally through a comprehensive approach.',
+    title: 'Cloud & DevOps',
+    body: 'Design, automate, and operate reliable cloud platforms with CI/CD, Terraform, Kubernetes, observability, and security practices.',
   },
   {
     icon: ServerCog,
-    title: 'Managed Magic',
-    body: 'Comprehensive managed services in an outsourced model, supported by clear service level agreements, escalation procedures and governance frameworks.',
+    title: 'Managed Engineering',
+    body: 'Extend your delivery capacity with an engineering team that owns outcomes, supports production, and evolves with your roadmap.',
   },
   {
     icon: Database,
-    title: 'Dataguard Elite',
-    body: 'A robust data governance strategy maximizes the value of your information — enabling better decisions, fostering innovation and enhancing collaboration.',
+    title: 'Data & Governance',
+    body: 'Build trustworthy data platforms with clear ownership, governance, security, quality controls, and scalable analytics foundations.',
   },
   {
     icon: Smartphone,
-    title: 'App Alchemy',
-    body: 'Custom app development solutions that automate your business processes and boost engagement with your target audience.',
+    title: 'Application Development',
+    body: 'Design and build production-ready web, mobile, backend, and distributed systems from initial architecture through launch.',
   },
   {
     icon: Compass,
-    title: 'Mystic Future',
-    body: "Consulting that guides you toward smart, forward-looking decisions to drive your company's growth and turn your vision into tangible results.",
+    title: 'Technology Consulting',
+    body: 'Get senior technical guidance on architecture, cloud strategy, modernization, platform engineering, and engineering organization decisions.',
   },
 ]
 
@@ -54,6 +56,7 @@ export function Services() {
             <GlassCard
               as="li"
               key={service.title}
+              id={serviceIds[i]}
               className="group flex flex-col p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/40 md:p-10"
             >
               <div className="flex items-start justify-between">
@@ -64,7 +67,7 @@ export function Services() {
                   {String(i + 1).padStart(2, '0')}
                 </span>
               </div>
-              <h3 className="mt-10 text-xl font-bold text-navy">{service.title}</h3>
+              <h3 className="mt-10 text-xl font-bold text-navy"><a href={`#${serviceIds[i]}`} className="hover:text-primary">{service.title}</a></h3>
               <p className="mt-4 leading-relaxed text-muted-foreground">{service.body}</p>
             </GlassCard>
           ))}

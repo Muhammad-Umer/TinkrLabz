@@ -7,10 +7,10 @@ import { Logo } from './logo'
 import { ThemeToggle } from './theme-toggle'
 
 const links = [
-  { href: '#about', label: 'About' },
-  { href: '#services', label: 'Services' },
-  { href: '#process', label: 'Process' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/#about', label: 'About' },
+  { href: '/#services', label: 'Services' },
+  { href: '/#process', label: 'Process' },
+  { href: '/#contact', label: 'Contact' },
 ]
 
 export function SiteHeader() {
@@ -45,7 +45,7 @@ export function SiteHeader() {
           <div className="flex items-center gap-2">
             <ThemeToggle />
             <a
-              href="#contact"
+              href="/#contact"
               className="btn-shine hidden rounded-full bg-primary px-5 py-3 font-heading text-xs font-semibold uppercase tracking-[0.18em] text-primary-foreground md:inline-block"
             >
               {"Let's Talk"}

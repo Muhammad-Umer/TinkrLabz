@@ -3,7 +3,7 @@ import { SectionHeading } from './section-heading'
 import { ContactForm } from './contact-form'
 
 const details = [
-  { icon: Users, label: 'Team building', value: 'Elite, dedicated tech teams' },
+  { icon: Users, label: 'Team building', value: 'Senior, problem-focused teams' },
   { icon: Handshake, label: 'Engagements', value: 'Projects & managed services' },
   { icon: Globe, label: 'Working model', value: 'Remote-first collaboration' },
 ]
@@ -23,8 +23,7 @@ export function Contact() {
         <div>
           <SectionHeading eyebrow="Contact Us" title="Tell us what you're building." />
           <p className="mt-8 max-w-md leading-relaxed text-muted-foreground">
-            Share a few details about your project and our team will get back to you to plan the
-            next steps.
+            Share where you are, where you're stuck, and what success looks like. We'll tell you how we'd approach it.
           </p>
           <ul className="mt-12 flex flex-col gap-6">
             {details.map((d) => (

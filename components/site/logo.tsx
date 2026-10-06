@@ -5,9 +5,9 @@ import { cn } from '@/lib/utils'
 export function Logo({ className }: { className?: string }) {
   return (
     <Link
-      href="#top"
+      href="/#top"
       className={cn('group inline-flex items-center gap-3', className)}
-      aria-label="TinkerLabs home"
+      aria-label="TinkrLabz home"
     >
       <Image
         src="/images/logo-mark.png"
@@ -26,7 +26,7 @@ export function Logo({ className }: { className?: string }) {
         className="hidden h-8 w-auto transition-transform duration-300 group-hover:scale-110 dark:block"
       />
       <span className="font-heading text-lg font-bold tracking-tight text-navy">
-        Tinker<span className="text-primary">Labs</span>
+        Tinkr<span className="text-primary">Labz</span>
       </span>
     </Link>
   )

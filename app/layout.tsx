@@ -1,6 +1,5 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Montserrat, Nunito_Sans } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
 import './globals.css'
 
@@ -16,22 +15,13 @@ if (typeof window !== 'undefined') {
 }
 
 
-const montserrat = Montserrat({
-  subsets: ['latin'],
-  variable: '--font-montserrat',
-  weight: ['500', '600', '700', '800'],
-})
-
-const nunito = Nunito_Sans({
-  subsets: ['latin'],
-  variable: '--font-nunito',
-})
-
 export const metadata: Metadata = {
-  title: 'TinkerLabs — Crafting Code, Shaping Tomorrow',
-  description:
-    'TinkerLabs assembles elite tech teams and drives software projects from concept to completion — DevOps, managed services, data governance, app development and consulting.',
-  generator: 'v0.app',
+  metadataBase: new URL('https://www.tinkrlabz.com'),
+  title: 'TinkrLabz | Software Development, DevOps & Technology Consulting',
+  description: 'TinkrLabz builds senior engineering teams for cloud, DevOps, application development, data platforms, managed engineering, and technology consulting.',
+  openGraph: { title: 'TinkrLabz | Software Development, DevOps & Technology Consulting', description: 'Senior engineering teams built around your problem. Architecture, cloud, applications, and ongoing operations.', type: 'website', siteName: 'TinkrLabz', images: [{ url: '/opengraph-image', width: 1200, height: 630 }] },
+  twitter: { card: 'summary_large_image', title: 'TinkrLabz | Software Development, DevOps & Technology Consulting', description: 'Senior engineering teams built around your problem.', images: ['/opengraph-image'] },
+  verification: { google: process.env.GOOGLE_SITE_VERIFICATION },
   icons: {
     icon: '/images/logo-mark.png',
     apple: '/images/logo-mark.png',
@@ -54,7 +44,6 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${montserrat.variable} ${nunito.variable}`}
     >
       <body className="antialiased">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>

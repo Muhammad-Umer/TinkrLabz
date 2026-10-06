@@ -5,9 +5,9 @@ import { SectionHeading } from './section-heading'
 
 const stats = [
   { value: '5', label: 'Core practices' },
-  { value: 'SLA', label: 'Backed delivery' },
+  { value: 'Owned', label: 'Delivery outcomes' },
   { value: 'End-to-end', label: 'Concept to launch' },
-  { value: 'Elite', label: 'Hand-picked teams' },
+  { value: 'Senior', label: 'Problem-focused teams' },
 ]
 
 export function About() {
@@ -17,9 +17,7 @@ export function About() {
         <div>
           <SectionHeading eyebrow="About Us" title="We turn your ideas into working software." />
           <p className="mt-8 text-pretty text-lg leading-relaxed text-muted-foreground">
-            At TinkerLabs, we specialize in transforming your ideas into reality through innovative
-            software solutions. As a trusted partner, we help technology-driven businesses build
-            exceptional teams and deliver complex projects with confidence.
+            TinkrLabz helps technology-driven businesses turn complex software problems into working products. We assemble the team, own the delivery, and stay with you long after launch.
           </p>
 
           <dl className="mt-12 grid grid-cols-2 gap-4">
@@ -61,7 +59,7 @@ export function About() {
               </blockquote>
               <figcaption className="mt-5 flex items-center gap-3 text-sm text-muted-foreground">
                 <span className="h-px w-8 bg-primary" aria-hidden />
-                The TinkerLabs promise
+                The TinkrLabz promise
               </figcaption>
             </GlassCard>
           </div>

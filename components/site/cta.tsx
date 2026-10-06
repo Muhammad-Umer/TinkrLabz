@@ -8,7 +8,7 @@ export function Cta() {
         <ShaderGradient />
         <div className="liquid-glass relative m-3 flex flex-col items-start gap-10 rounded-2xl px-8 py-14 md:m-4 md:flex-row md:items-center md:justify-between md:px-14">
           <h2 className="max-w-2xl text-balance text-3xl font-bold leading-tight tracking-tight text-navy md:text-4xl">
-            Your next project is within sight with TinkerLabs.
+            Your next project is within sight with TinkrLabz.
           </h2>
           <a
             href="#contact"
