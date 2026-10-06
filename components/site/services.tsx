@@ -1,11 +1,16 @@
-import { ArrowUpRight, Compass, Database, Infinity as InfinityIcon, ServerCog, Smartphone } from 'lucide-react'
+import { BrainCircuit, Compass, Database, Infinity as InfinityIcon, ServerCog, Smartphone } from 'lucide-react'
 import { VantaBackground } from '@/components/effects/vanta-background'
 import { GlassCard } from '@/components/effects/glass-card'
 import { SectionHeading } from './section-heading'
 
-const serviceIds = ['cloud-devops', 'managed-engineering', 'data-governance', 'application-development', 'technology-consulting']
+const serviceIds = ['ai-automation', 'cloud-devops', 'managed-engineering', 'data-governance', 'application-development', 'technology-consulting']
 
 const services = [
+  {
+    icon: BrainCircuit,
+    title: 'AI & Automation',
+    body: 'Build AI applications, knowledge retrieval, and useful agents. Automate workflows with evaluation, permissions, and operational controls designed in from the start.',
+  },
   {
     icon: InfinityIcon,
     title: 'Cloud & DevOps',
@@ -70,23 +75,7 @@ export function Services() {
               <p className="mt-4 leading-relaxed text-muted-foreground">{service.body}</p>
             </GlassCard>
           ))}
-          <li className="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-primary p-8 text-primary-foreground transition-transform duration-300 hover:-translate-y-1.5 md:p-10">
-            <div
-              className="absolute -top-16 -right-16 size-48 rounded-full bg-white/15 blur-2xl transition-transform duration-500 group-hover:scale-150"
-              aria-hidden
-            />
-            <h3 className="relative text-xl font-bold">Have something else in mind?</h3>
-            <a
-              href="#contact"
-              className="relative mt-10 inline-flex items-center gap-2 font-heading text-xs font-semibold uppercase tracking-[0.2em]"
-            >
-              Tell us about it
-              <ArrowUpRight
-                className="size-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
-                aria-hidden
-              />
-            </a>
-          </li>
+
         </ul>
       </div>
     </section>

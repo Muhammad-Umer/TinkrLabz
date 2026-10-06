@@ -4,7 +4,7 @@ import { GlassCard } from '@/components/effects/glass-card'
 import { SectionHeading } from './section-heading'
 
 const stats = [
-  { value: '5', label: 'Core practices' },
+  { value: '6', label: 'Core practices' },
   { value: 'Owned', label: 'Delivery outcomes' },
   { value: 'Full lifecycle', label: 'Design to operation' },
   { value: 'Products', label: 'Built by TinkrLabz' },
@@ -15,9 +15,9 @@ export function About() {
     <section id="about" className="scroll-mt-24 py-24 md:py-32">
       <div className="mx-auto grid max-w-6xl gap-16 px-6 lg:grid-cols-2 lg:items-center">
         <div>
-          <SectionHeading eyebrow="About Us" title="We turn your ideas into working software." />
+          <SectionHeading eyebrow="About Us" title="Useful intelligence. Working software." />
           <p className="mt-8 text-pretty text-lg leading-relaxed text-muted-foreground">
-            TinkrLabz creates its own software products and helps businesses build and improve theirs. From application development to cloud and data platforms, we focus on useful software, reliable delivery, and lasting value.
+            TinkrLabz creates software products and helps businesses put AI to work. We connect intelligent applications, automation, cloud, and data to solve practical problems and keep improving what we launch.
           </p>
 
           <dl className="mt-12 grid grid-cols-2 gap-4">

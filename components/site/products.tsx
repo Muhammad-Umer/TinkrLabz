@@ -36,9 +36,9 @@ export function Products() {
   return (
     <section id="products" className="scroll-mt-24 py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6">
-        <SectionHeading eyebrow="Our Products" title="Ideas shaped into useful software." />
+        <SectionHeading eyebrow="Our Products" title="Ideas with intelligence built in." />
         <p className="mt-6 max-w-2xl leading-relaxed text-muted-foreground">
-          Our own software products sit alongside the solutions we deliver for clients, with the same focus on real problems and lasting value.
+          Our product direction brings AI and practical software together. Alongside client solutions, we explore tools that make everyday work simpler and more useful.
         </p>
         <div className="mt-10"><ProductCatalog /></div>
         <Link href="/products" className="mt-8 inline-block font-semibold text-primary hover:underline">

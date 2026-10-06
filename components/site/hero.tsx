@@ -1,7 +1,7 @@
 import { ArrowDown, ArrowRight } from 'lucide-react'
 import { VantaBackground } from '@/components/effects/vanta-background'
 
-const highlights = ['Cloud & DevOps', 'Application Development', 'Data & Governance', 'Managed Engineering']
+const highlights = ['AI Applications', 'Intelligent Automation', 'Software Products', 'Cloud & Data']
 
 export function Hero() {
   return (
@@ -22,13 +22,13 @@ export function Hero() {
             <span className="absolute inline-flex size-full animate-ping rounded-full bg-primary opacity-60" />
             <span className="relative inline-flex size-2 rounded-full bg-primary" />
           </span>
-          Welcome to TinkrLabz
+          AI products. Practical engineering.
         </p>
         <h1 className="max-w-4xl text-balance text-4xl font-bold leading-[1.05] tracking-tight text-navy md:text-6xl">
-          Software that solves <span className="text-primary">real problems.</span>
+          AI and software. <span className="text-primary">Built for real impact.</span>
         </h1>
         <p className="mt-8 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
-          TinkrLabz creates software products and delivers applications, cloud platforms, and data solutions. We take ideas from the first design through launch and ongoing operation.
+          TinkrLabz turns AI ideas into useful products, intelligent workflows, and reliable software. From models and data to applications and cloud, we build it, connect it, and keep it working.
         </p>
 
         <div className="pointer-events-auto mt-8 flex flex-wrap items-center gap-4">
@@ -36,7 +36,7 @@ export function Hero() {
             href="#contact"
             className="btn-shine group inline-flex items-center gap-3 rounded-full bg-primary px-8 py-4 font-heading text-xs font-semibold uppercase tracking-[0.2em] text-primary-foreground"
           >
-            Discuss Your Project
+            Bring Your Idea
             <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden />
           </a>
           <a
@@ -46,6 +46,8 @@ export function Hero() {
             Explore Products
           </a>
         </div>
+
+        <a href="#contact" className="pointer-events-auto mt-6 inline-block text-sm font-semibold text-primary hover:underline">Meet TinkrBot and start your mission</a>
 
         <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-muted-foreground">
           {highlights.map((item) => (

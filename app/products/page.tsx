@@ -19,7 +19,7 @@ export const metadata = {
 export default function ProductsPage() {
   return (
     <ContentPage title="Our products">
-      <p>Software products created by TinkrLabz, alongside our engineering services.</p>
+      <p>Explore our product direction across AI and practical software, alongside our engineering services.</p>
       <ProductCatalog />
     </ContentPage>
   )

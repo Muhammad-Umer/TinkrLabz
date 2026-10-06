@@ -17,10 +17,10 @@ if (typeof window !== 'undefined') {
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.tinkrlabz.com'),
-  title: 'TinkrLabz | Software Products & Engineering Services',
-  description: 'TinkrLabz creates software products and delivers application development, cloud, DevOps, data platforms, managed engineering, and technology consulting.',
-  openGraph: { title: 'TinkrLabz | Software Products & Engineering Services', description: 'Software products and engineering services for real business problems. Applications, cloud, data, and ongoing operation.', type: 'website', siteName: 'TinkrLabz', images: [{ url: '/opengraph-image', width: 1200, height: 630 }] },
-  twitter: { card: 'summary_large_image', title: 'TinkrLabz | Software Products & Engineering Services', description: 'Software that solves real problems.', images: ['/opengraph-image'] },
+  title: 'TinkrLabz | AI Products & Software Engineering',
+  description: 'TinkrLabz builds AI applications, intelligent automation, and software products with cloud, data, and engineering services from idea to operation.',
+  openGraph: { title: 'TinkrLabz | AI Products & Software Engineering', description: 'AI products, intelligent automation, and software engineering for real business problems.', type: 'website', siteName: 'TinkrLabz', images: [{ url: '/opengraph-image', width: 1200, height: 630 }] },
+  twitter: { card: 'summary_large_image', title: 'TinkrLabz | AI Products & Software Engineering', description: 'AI and software built for real impact.', images: ['/opengraph-image'] },
   verification: { google: process.env.GOOGLE_SITE_VERIFICATION },
   icons: {
     icon: '/images/logo-mark.png',

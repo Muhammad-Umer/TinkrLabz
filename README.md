@@ -6,7 +6,7 @@ Next.js App Router website. Use Node 24 and pnpm 11.19.0.
 
 - `pnpm install --frozen-lockfile`
 - `pnpm typecheck`
-- `node --experimental-strip-types --test tests/contact.test.mjs`
+- `node --experimental-strip-types --test tests/*.test.mjs`
 - `pnpm build`
 - `pnpm start`
 
@@ -26,4 +26,10 @@ System fonts avoid build-time requests to Google Fonts. To restore custom typogr
 
 ## Products and positioning
 
-`lib/products.ts` is the approved public product catalog. It starts empty because no product details have been supplied. Add a unique slug, name, description, and a working product URL to publish a product in both the homepage section and `/products`. Keep unpublished concepts out of this catalog. The site supports both TinkrLabz products and client engineering services. Copy focuses on software outcomes and uses no hyphens or dash punctuation in visible text. Cloud capabilities include AWS, Azure, and Google Cloud Platform (GCP).
+`lib/products.ts` is the approved public product catalog. It starts empty because no product details have been supplied. Add a unique slug, name, description, and a working product URL to publish a product in both the homepage section and `/products`. Keep unpublished concepts out of this catalog. The site supports both TinkrLabz products and client engineering services. Copy focuses on software outcomes and uses no hyphens or dash punctuation in visible text. Cloud provider names are consistently written as Amazon Web Services, Microsoft Azure, and Google Cloud.
+
+## AI and TinkrBot
+
+AI positioning covers applications, retrieval, agents, workflow automation, evaluation, and operational controls. It does not claim specific customer outcomes or list an unreleased AI product. `lib/technologies.ts` assigns each technology to one primary category and uses full cloud provider names consistently.
+
+TinkrBot is an optional local guide in the contact form, with three missions and a four field progress indicator. Selecting a mission changes the editable topic without replacing project details. A starting prompt is inserted only on explicit request when details are empty. Skipping the guide preserves input. No conversational model or external AI service is called by TinkrBot. The send celebration appears only after the existing contact endpoint confirms success.

@@ -3,7 +3,7 @@ import { SectionHeading } from './section-heading'
 import { ContactForm } from './contact-form'
 
 const details = [
-  { icon: Layers, label: 'Solutions', value: 'Products, applications & platforms' },
+  { icon: Layers, label: 'Solutions', value: 'AI, products & platforms' },
   { icon: Handshake, label: 'Engagements', value: 'Product inquiries & engineering services' },
   { icon: Globe, label: 'Working model', value: 'Clear communication from design to operation' },
 ]
