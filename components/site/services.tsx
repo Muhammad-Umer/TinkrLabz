@@ -1,7 +1,6 @@
 import { BrainCircuit, Compass, Database, Infinity as InfinityIcon, ServerCog, Smartphone } from 'lucide-react'
 import { VantaBackground } from '@/components/effects/vanta-background'
 import { GlassCard } from '@/components/effects/glass-card'
-import { GuideAction } from './guide-action'
 import { SectionHeading } from './section-heading'
 
 const serviceIds = ['ai-automation', 'cloud-devops', 'managed-engineering', 'data-governance', 'application-development', 'technology-consulting']
@@ -54,7 +53,7 @@ export function Services() {
         <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <SectionHeading eyebrow="Our Services" title="Everything you need to build and scale." />
           <p className="max-w-sm leading-relaxed text-muted-foreground">
-            Choose a service. TinkrBot will help you start.
+            Choose the service that fits your next step.
           </p>
         </div>
 
@@ -76,7 +75,7 @@ export function Services() {
               </div>
               <h3 className="mt-6 text-xl font-bold text-navy"><a href={`#${serviceIds[i]}`} className="hover:text-primary">{service.title}</a></h3>
               <p className="mt-4 leading-relaxed text-muted-foreground">{service.body}</p>
-              <GuideAction view="contact" category={inquiryCategories[i]} className="mt-5 text-left text-sm font-semibold text-primary hover:underline">Start here</GuideAction>
+              <a href={`/?topic=${encodeURIComponent(inquiryCategories[i])}#contact`} className="mt-5 text-left text-sm font-semibold text-primary hover:underline">Start here</a>
             </GlassCard>
           ))}
 

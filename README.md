@@ -6,7 +6,7 @@ Next.js App Router website. Use Node 24 and pnpm 11.19.0.
 
 - `pnpm install --frozen-lockfile`
 - `pnpm typecheck`
-- `node --experimental-strip-types --test tests/*.test.mjs tests/*.test.cjs`
+- `node --experimental-strip-types --test tests/*.test.mjs`
 - `pnpm build`
 - `pnpm start`
 
@@ -22,18 +22,12 @@ For Search Console, obtain the property verification token, set `GOOGLE_SITE_VER
 
 TK-31 is blocked: no approved project evidence is available. `/work` is prepared but does not fabricate case studies. Supply at least two verified summaries before completing that issue. No LinkedIn URL was supplied, so no speculative social link is published. Review Privacy Policy and Website Terms against actual company practices before production. Technology groups follow the Linear issue's supplied list; confirm supported capabilities before launch.
 
-System fonts avoid build-time requests to Google Fonts. To restore custom typography, add licensed, self-hosted Montserrat and Nunito Sans files with `next/font/local`.
+Typography matches main exactly: Montserrat headings (weights 500, 600, 700, 800) and Nunito Sans body text, Latin subsets, loaded through next/font/google.
 
 ## Products and positioning
 
 `lib/products.ts` is the approved public product catalog. It starts empty because no product details have been supplied. Add a unique slug, name, description, and a working product URL to publish a product in both the homepage section and `/products`. Keep unpublished concepts out of this catalog. The site supports both TinkrLabz products and client engineering services. Copy focuses on software outcomes and uses no hyphens or dash punctuation in visible text. Cloud provider names are consistently written as Amazon Web Services, Microsoft Azure, and Google Cloud.
 
-## AI and TinkrBot
+## AI positioning
 
-AI positioning covers applications, retrieval, agents, workflow automation, evaluation, and operational controls. It does not claim specific customer outcomes or list an unreleased AI product. `lib/technologies.ts` assigns each technology to one primary category and uses full cloud provider names consistently.
-
-TinkrBot is the primary continuous conversation on the homepage. Visitors type freely, receive contextual replies and inline cards, and develop an inquiry without modal navigation. Header actions feed the same conversation. Secondary pages can resume it, and direct browsing remains available below the workspace.
-
-TinkrBot runs entirely on local conversation logic. There is no AI model, external conversation request, or model credential. It adapts follow ups to the visitor's goal and conversation context, renders catalog information inline, and builds a brief. The UI labels it Guided conversation. Company AI capability positioning describes engineering services rather than claiming TinkrBot uses a model.
-
-Inquiry collection runs locally in the conversation. Visitors must explicitly review and press Send inquiry; success appears only after the contact endpoint confirms delivery acceptance. Conversation state lives in memory and clears on reload or New conversation. The existing contact API validates payloads and origins; use Vercel Firewall rate limiting for `/api/contact` for distributed public traffic.
+AI services cover applications, retrieval, agents, automation, evaluation, and operational controls. Product availability comes only from the approved catalog. Navigation and inquiry links work directly, and the independent contact form preserves validation and explicit submission.

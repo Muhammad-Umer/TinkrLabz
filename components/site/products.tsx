@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { GuideAction } from './guide-action'
 import { products } from '@/lib/products'
 import { SectionHeading } from './section-heading'
 
@@ -11,7 +10,7 @@ export function ProductCatalog() {
         <p className="mt-3 max-w-2xl leading-relaxed text-muted-foreground">
           No public products are listed yet.
         </p>
-        <GuideAction view="contact" category="Ask about a TinkrLabz product" className="mt-5 inline-block font-semibold text-primary hover:underline">Ask TinkrBot about products</GuideAction>
+        <a href="/?topic=Ask%20about%20a%20TinkrLabz%20product#contact" className="mt-5 inline-block font-semibold text-primary hover:underline">Ask about products</a>
       </div>
     )
   }

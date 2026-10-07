@@ -19,7 +19,7 @@ export const metadata = {
 export default function ProductsPage() {
   return (
     <ContentPage title="Our products">
-      <p>AI and practical software. Ask TinkrBot what is next.</p>
+      <p>AI and practical software. Explore what is next.</p>
       <ProductCatalog />
     </ContentPage>
   )

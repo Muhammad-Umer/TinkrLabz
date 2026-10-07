@@ -1,8 +1,7 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
+import { Montserrat, Nunito_Sans } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
-import { GuideProvider } from '@/components/site/guide-context'
-import { SiteGuide } from '@/components/site/site-guide'
 import './globals.css'
 
 if (typeof window !== 'undefined') {
@@ -16,6 +15,17 @@ if (typeof window !== 'undefined') {
   };
 }
 
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  variable: '--font-montserrat',
+  weight: ['500', '600', '700', '800'],
+})
+
+const nunito = Nunito_Sans({
+  subsets: ['latin'],
+  variable: '--font-nunito',
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.tinkrlabz.com'),
@@ -46,10 +56,11 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
+      className={`${montserrat.variable} ${nunito.variable}`}
     >
       <body className="antialiased">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
-          <GuideProvider>{children}<SiteGuide /></GuideProvider>
+          {children}
         </ThemeProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

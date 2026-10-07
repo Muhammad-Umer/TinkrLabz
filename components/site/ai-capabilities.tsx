@@ -1,5 +1,4 @@
 import { BrainCircuit, Workflow, ShieldCheck } from 'lucide-react'
-import { GuideAction } from './guide-action'
 import { SectionHeading } from './section-heading'
 
 const capabilities = [
@@ -27,7 +26,7 @@ export function AiCapabilities() {
           ))}
         </div>
         <div className="mt-10 flex flex-wrap items-center gap-4">
-          <GuideAction view="ai" className="rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground">Explore AI with TinkrBot</GuideAction>
+          <a href="/?topic=AI%20%26%20Automation#contact" className="rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground">Discuss an AI project</a>
         </div>
       </div>
     </section>

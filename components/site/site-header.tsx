@@ -4,19 +4,16 @@ import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Logo } from './logo'
-import { GuideAction } from './guide-action'
-import { useGuide, type GuideView } from './guide-context'
 import { ThemeToggle } from './theme-toggle'
 
 const links = [
-  { href: 'services', label: 'Services' },
-  { href: 'products', label: 'Products' },
-  { href: 'ai', label: 'AI' },
-  { href: 'contact', label: 'Contact' },
+  { href: '/#services', label: 'Services' },
+  { href: '/products', label: 'Products' },
+  { href: '/#ai', label: 'AI' },
+  { href: '/#contact', label: 'Contact' },
 ]
 
 export function SiteHeader() {
-  const guide = useGuide()
   const [open, setOpen] = useState(false)
 
   return (
@@ -34,13 +31,13 @@ export function SiteHeader() {
             <ul className="flex items-center gap-1">
               {links.map((link) => (
                 <li key={link.href}>
-                  <button
-                    type="button"
-                    onClick={() => { setOpen(false); guide.show(link.href as GuideView) }}
+                  <a
+                    href={link.href}
+                    onClick={() => setOpen(false)}
                     className="rounded-full px-4 py-2 font-heading text-xs font-semibold uppercase tracking-[0.18em] text-foreground/70 transition-colors hover:bg-foreground/5 hover:text-foreground"
                   >
                     {link.label}
-                  </button>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -48,7 +45,7 @@ export function SiteHeader() {
 
           <div className="flex items-center gap-2">
             <ThemeToggle />
-            <GuideAction className="btn-shine hidden rounded-full bg-primary px-5 py-3 text-xs font-semibold text-primary-foreground lg:inline-block">Guide me</GuideAction>
+            <a href="/#contact" className="btn-shine hidden rounded-full bg-primary px-5 py-3 text-xs font-semibold text-primary-foreground lg:inline-block">Get in touch</a>
             <button
               type="button"
               className="flex size-10 items-center justify-center rounded-full text-foreground lg:hidden"
@@ -67,13 +64,13 @@ export function SiteHeader() {
             <ul className="flex flex-col px-6 py-3">
               {links.map((link) => (
                 <li key={link.href}>
-                  <button
-                    type="button"
-                    onClick={() => { setOpen(false); guide.show(link.href as GuideView) }}
+                  <a
+                    href={link.href}
+                    onClick={() => setOpen(false)}
                     className="block py-3 font-heading text-sm font-semibold uppercase tracking-[0.18em] text-foreground"
                   >
                     {link.label}
-                  </button>
+                  </a>
                 </li>
               ))}
             </ul>
