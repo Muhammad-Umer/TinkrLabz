@@ -12,12 +12,10 @@ export function WelcomeStatus() {
   }, [])
 
   return (
-    <div className="liquid-glass mb-8 inline-flex max-w-full items-center gap-3 rounded-2xl px-4 py-3 sm:rounded-full">
-      <span aria-hidden="true" className={`size-1.5 shrink-0 rounded-full bg-primary ${connected ? '' : 'motion-safe:animate-pulse'}`} />
-      <div role="status" aria-live="polite" className="min-w-0">
-        <p className="font-heading text-[9px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">{connected ? 'Connection established' : 'Establishing connection'}</p>
-        <p className="mt-1 text-xs text-foreground"><span className="mr-2 font-semibold text-primary">TinkrBot</span>{connected ? 'Welcome to TinkrLabz.' : 'A moment of possibility.'}</p>
-      </div>
+    <div role="status" aria-live="polite" className="mb-8 inline-flex max-w-full items-center gap-2 rounded-lg border border-foreground/15 bg-background/75 px-3 py-2.5 text-[10px] shadow-sm backdrop-blur-sm sm:px-4 sm:text-xs">
+      <span aria-hidden="true" className="font-semibold text-primary">tinkrbot ~ $</span>
+      <span className="whitespace-nowrap text-foreground/80">{connected ? 'Welcome to TinkrLabz.' : 'Connecting…'}</span>
+      <span aria-hidden="true" className="h-3 w-1.5 shrink-0 bg-primary/80 motion-safe:animate-pulse" />
     </div>
   )
 }
