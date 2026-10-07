@@ -9,7 +9,12 @@ export function Cta() {
           <h2 className="max-w-2xl text-balance text-3xl font-bold leading-tight tracking-tight text-navy md:text-4xl">
             Your next idea could work smarter with AI.
           </h2>
-          <a href="/#contact" className="rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground">Discuss your idea</a>
+          <a
+            href="/#contact"
+            className="rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground"
+          >
+            Discuss your idea
+          </a>
         </div>
       </div>
     </section>

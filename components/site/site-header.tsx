@@ -45,7 +45,12 @@ export function SiteHeader() {
 
           <div className="flex items-center gap-2">
             <ThemeToggle />
-            <a href="/#contact" className="btn-shine hidden rounded-full bg-primary px-5 py-3 text-xs font-semibold text-primary-foreground lg:inline-block">Get in touch</a>
+            <a
+              href="/#contact"
+              className="btn-shine hidden rounded-full bg-primary px-5 py-3 text-xs font-semibold text-primary-foreground lg:inline-block"
+            >
+              Get in touch
+            </a>
             <button
               type="button"
               className="flex size-10 items-center justify-center rounded-full text-foreground lg:hidden"
@@ -53,7 +58,11 @@ export function SiteHeader() {
               aria-controls="mobile-nav"
               onClick={() => setOpen((v) => !v)}
             >
-              {open ? <X className="size-5" aria-hidden /> : <Menu className="size-5" aria-hidden />}
+              {open ? (
+                <X className="size-5" aria-hidden />
+              ) : (
+                <Menu className="size-5" aria-hidden />
+              )}
               <span className="sr-only">Toggle menu</span>
             </button>
           </div>

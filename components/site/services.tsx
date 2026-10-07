@@ -1,11 +1,32 @@
-import { BrainCircuit, Compass, Database, Infinity as InfinityIcon, ServerCog, Smartphone } from 'lucide-react'
+import {
+  BrainCircuit,
+  Compass,
+  Database,
+  Infinity as InfinityIcon,
+  ServerCog,
+  Smartphone,
+} from 'lucide-react'
 import { VantaBackground } from '@/components/effects/vanta-background'
 import { GlassCard } from '@/components/effects/glass-card'
 import { SectionHeading } from './section-heading'
 
-const serviceIds = ['ai-automation', 'cloud-devops', 'managed-engineering', 'data-governance', 'application-development', 'technology-consulting']
+const serviceIds = [
+  'ai-automation',
+  'cloud-devops',
+  'managed-engineering',
+  'data-governance',
+  'application-development',
+  'technology-consulting',
+]
 
-const inquiryCategories = ['AI & Automation', 'Cloud / DevOps', 'Managed engineering', 'Data / governance', 'Build a product', 'Technology consulting']
+const inquiryCategories = [
+  'AI & Automation',
+  'Cloud / DevOps',
+  'Managed engineering',
+  'Data / governance',
+  'Build a product',
+  'Technology consulting',
+]
 
 const services = [
   {
@@ -73,12 +94,20 @@ export function Services() {
                   {String(i + 1).padStart(2, '0')}
                 </span>
               </div>
-              <h3 className="mt-6 text-xl font-bold text-navy"><a href={`#${serviceIds[i]}`} className="hover:text-primary">{service.title}</a></h3>
+              <h3 className="mt-6 text-xl font-bold text-navy">
+                <a href={`#${serviceIds[i]}`} className="hover:text-primary">
+                  {service.title}
+                </a>
+              </h3>
               <p className="mt-4 leading-relaxed text-muted-foreground">{service.body}</p>
-              <a href={`/?topic=${encodeURIComponent(inquiryCategories[i])}#contact`} className="mt-5 text-left text-sm font-semibold text-primary hover:underline">Start here</a>
+              <a
+                href={`/?topic=${encodeURIComponent(inquiryCategories[i])}#contact`}
+                className="mt-5 text-left text-sm font-semibold text-primary hover:underline"
+              >
+                Start here
+              </a>
             </GlassCard>
           ))}
-
         </ul>
       </div>
     </section>

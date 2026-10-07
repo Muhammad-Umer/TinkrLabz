@@ -2,7 +2,13 @@ import { WelcomeStatus } from './welcome-status'
 import { ArrowDown, ArrowRight } from 'lucide-react'
 import { VantaBackground } from '@/components/effects/vanta-background'
 
-const highlights = ['AI & Automation', 'Cloud & DevOps', 'Application Development', 'Data & Governance', 'Managed Engineering']
+const highlights = [
+  'AI & Automation',
+  'Cloud & DevOps',
+  'Application Development',
+  'Data & Governance',
+  'Managed Engineering',
+]
 
 export function Hero() {
   return (
@@ -23,7 +29,8 @@ export function Hero() {
           AI and software that solve <span className="text-primary">real problems.</span>
         </h1>
         <p className="mt-8 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
-          AI applications, intelligent automation, and software products. From your first idea to reliable operation.
+          AI applications, intelligent automation, and software products. From your first idea to
+          reliable operation.
         </p>
 
         <div className="pointer-events-auto mt-8 flex flex-wrap items-center gap-4">
@@ -32,7 +39,10 @@ export function Hero() {
             className="btn-shine group inline-flex items-center gap-3 rounded-full bg-primary px-8 py-4 font-heading text-xs font-semibold uppercase tracking-[0.2em] text-primary-foreground"
           >
             Discuss Your Project
-            <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden />
+            <ArrowRight
+              className="size-4 transition-transform group-hover:translate-x-1"
+              aria-hidden
+            />
           </a>
           <a
             href="#products"
