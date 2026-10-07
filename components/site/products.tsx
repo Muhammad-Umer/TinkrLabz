@@ -6,11 +6,11 @@ export function ProductCatalog() {
   if (!products.length) {
     return (
       <div className="rounded-2xl border border-border bg-secondary/40 p-8">
-        <h3 className="text-xl font-bold text-navy">What is next?</h3>
+        <h3 className="text-xl font-bold text-navy">Practical by design.</h3>
         <p className="mt-3 max-w-2xl leading-relaxed text-muted-foreground">
-          No public products are listed yet.
+          Useful AI. Simpler workflows. Tools with a clear purpose.
         </p>
-        <a href="/?topic=Ask%20about%20a%20TinkrLabz%20product#contact" className="mt-5 inline-block font-semibold text-primary hover:underline">Ask about products</a>
+        <a href="/?topic=Ask%20about%20a%20TinkrLabz%20product#contact" className="mt-5 inline-block font-semibold text-primary hover:underline">Discuss a product idea</a>
       </div>
     )
   }
@@ -34,14 +34,11 @@ export function Products() {
   return (
     <section id="products" className="scroll-mt-24 py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6">
-        <SectionHeading eyebrow="Our Products" title="Ideas with intelligence built in." />
+        <SectionHeading eyebrow="The Product Lab" title="From possibility to product." />
         <p className="mt-6 max-w-2xl leading-relaxed text-muted-foreground">
-          AI and practical tools for everyday work.
+          Our product approach starts with a real problem and a simpler way to solve it.
         </p>
         <div className="mt-10"><ProductCatalog /></div>
-        <Link href="/products" className="mt-8 inline-block font-semibold text-primary hover:underline">
-          Explore products
-        </Link>
       </div>
     </section>
   )

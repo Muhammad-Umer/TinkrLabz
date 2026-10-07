@@ -41,7 +41,7 @@ export function ContactForm() {
         return
       }
       setSent(true)
-    } catch { setError('Unable to send. Try again or email hello@tinkrlabz.com.') }
+    } catch { setError('Unable to send. Your details are saved. Please try again shortly.') }
     finally { busy.current = false; setPending(false) }
   }
   function reset() { if (busy.current) return; setData(empty); setErrors({}); setError(''); setSent(false) }

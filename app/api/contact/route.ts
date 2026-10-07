@@ -14,7 +14,7 @@ export async function POST(request: Request) {
   if (data.website) return Response.json({ error: 'Unable to submit this message.' }, { status: 400 })
   const errors = validateContact(data)
   if (Object.keys(errors).length) return Response.json({ errors }, { status: 400 })
-  if (!process.env.RESEND_API_KEY || !process.env.CONTACT_FROM_EMAIL) return Response.json({ error: 'Messaging is temporarily unavailable. Please email hello@tinkrlabz.com.' }, { status: 503 })
+  if (!process.env.RESEND_API_KEY || !process.env.CONTACT_FROM_EMAIL) return Response.json({ error: 'Messaging is temporarily unavailable. Please try again shortly.' }, { status: 503 })
   try {
     const { error } = await new Resend(process.env.RESEND_API_KEY).emails.send({
       from: process.env.CONTACT_FROM_EMAIL, to: 'hello@tinkrlabz.com', replyTo: data.email,
@@ -23,5 +23,5 @@ export async function POST(request: Request) {
     })
     if (error) throw new Error('Email delivery failed')
     return Response.json({ success: true })
-  } catch { return Response.json({ error: 'Unable to send your message. Please try again or email hello@tinkrlabz.com.' }, { status: 502 }) }
+  } catch { return Response.json({ error: 'Unable to send your message. Please try again shortly.' }, { status: 502 }) }
 }

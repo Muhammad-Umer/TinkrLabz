@@ -31,3 +31,5 @@ Typography matches main exactly: Montserrat headings (weights 500, 600, 700, 800
 ## AI positioning
 
 AI services cover applications, retrieval, agents, automation, evaluation, and operational controls. Product availability comes only from the approved catalog. Navigation and inquiry links work directly, and the independent contact form preserves validation and explicit submission.
+
+The homepage uses a restrained decorative connection style welcome attributed to TinkrBot. It has no model connection or conversation interface. Products navigation points to /#products. Public contact links use the form; the email recipient remains internal.

@@ -1,3 +1,4 @@
+import { WelcomeStatus } from './welcome-status'
 import { ArrowDown, ArrowRight } from 'lucide-react'
 import { VantaBackground } from '@/components/effects/vanta-background'
 
@@ -17,13 +18,7 @@ export function Hero() {
       />
 
       <div className="pointer-events-none relative mx-auto w-full max-w-6xl px-6 pt-32 pb-24">
-        <p className="liquid-glass mb-8 inline-flex items-center gap-3 rounded-full px-4 py-2 font-heading text-[11px] font-semibold uppercase tracking-[0.3em] text-primary">
-          <span className="relative flex size-2">
-            <span className="absolute inline-flex size-full animate-ping rounded-full bg-primary opacity-60" />
-            <span className="relative inline-flex size-2 rounded-full bg-primary" />
-          </span>
-          Welcome to TinkrLabz
-        </p>
+        <WelcomeStatus />
         <h1 className="max-w-4xl text-balance text-4xl font-bold leading-[1.05] tracking-tight text-navy md:text-6xl">
           AI and software that solve <span className="text-primary">real problems.</span>
         </h1>
@@ -40,7 +35,7 @@ export function Hero() {
             <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden />
           </a>
           <a
-            href="/products"
+            href="#products"
             className="liquid-glass inline-flex items-center rounded-full px-8 py-4 font-heading text-xs font-semibold uppercase tracking-[0.2em] text-navy transition-transform hover:-translate-y-0.5"
           >
             Explore Products
@@ -58,7 +53,7 @@ export function Hero() {
       </div>
 
       <a
-        href="#about"
+        href="#ai"
         className="absolute bottom-10 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-3 font-heading text-[10px] font-semibold uppercase tracking-[0.3em] text-muted-foreground transition-colors hover:text-foreground md:flex"
       >
         Scroll
